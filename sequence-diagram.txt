@@ -1,0 +1,27 @@
+title Brewed Awakenings
+
+participant Main
+participant Employees
+participant Products
+participant Orders
+participant Database
+
+Main->Employees:Need an HTML list of employees
+Employees->Database:Get the employee data
+Employees<--Database:Returns data
+note over Employees:Create list with data
+Employees-->Main:Return HTML list of Employees
+
+Main->Products:Need an HTML list of products
+Products->Database:Get the products data
+Products<--Database:Returns data
+note over Products:Create list with data
+Products-->Main:Return HTML list of products
+
+Main->Orders:Need an HTML list of orders
+Orders->Database:Get product, employee, and order data
+Orders<--Database:Returns data
+note over Orders:Create list with data
+Orders-->Main:Return HTML list of orders
+
+note over Main:Make all strings visable to user
